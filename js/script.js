@@ -34,27 +34,20 @@ const ourTeam = [
 ]
 
 
-/* for(let i = 0; i < ourTeam.length; i++){
-    let singoloMembro = ourTeam[i];
-    for (const key in ourTeam[i]) {
-        console.log(singoloMembro[key]);
-        let pEl = document.createElement('p');
-        pEl.append(singoloMembro[key]);
-        sectionEl.appendChild(pEl);
-    }
-} */
-
 for(let i = 0; i < ourTeam.length; i++){
+    let divCardEl = document.createElement('div');
+    divCardEl.classList.add('card');
+    sectionEl.appendChild(divCardEl);
+    let imgEl = document.createElement('img');
+    divCardEl.appendChild(imgEl);
     let singoloMembro = ourTeam[i];
     for (const key in ourTeam[i]) {
         if(key !== 'foto'){
             let pEl = document.createElement('p');
             pEl.append(singoloMembro[key]);
-            sectionEl.appendChild(pEl);
+            divCardEl.appendChild(pEl);
         }else{
-            let imgEl = document.createElement('img');
             imgEl.src = singoloMembro[key];
-            sectionEl.appendChild(imgEl);
         }
     }
 }
