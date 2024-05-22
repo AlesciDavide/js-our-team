@@ -30,3 +30,11 @@ const ourTeam = [
         foto: 'barbara-ramos-graphic-designer.jpg',
     }
 ]
+
+
+for(let i = 0; i < ourTeam.length; i++){
+    let singoloMembro = ourTeam[i];
+    for (const key in ourTeam[i]) {
+        console.log(singoloMembro[key]);
+        }
+}
