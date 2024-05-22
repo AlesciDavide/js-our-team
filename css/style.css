@@ -6,7 +6,10 @@
 
 body{
     background-color:#f5f5f1;
+    font-family: arial, sans-serif;
+    user-select: none;
 }
+
 header > section{
     display: flex;
     justify-content: center;
@@ -22,11 +25,12 @@ header > section{
     margin: 2rem 0;
     align-self: center;
 }
+
 #sottotitolo{
     color: #6c6761;
     margin-bottom: 2rem;
+    line-height: 1.5rem;
 }
-
 
 section#container{
     width: 1000px;
@@ -49,6 +53,7 @@ div.card{
     margin-bottom: 2rem;
     background-color: white;
 }
+
 div.card > p:last-child{
     padding-bottom: 2rem;
     font-size: 1rem;

@@ -1,5 +1,6 @@
 const sectionEl = document.querySelector('section#container');
 
+/* array con oggetti testuali */
 const ourTeam = [
     {
         nome: 'Wayne Barnett',
@@ -33,15 +34,18 @@ const ourTeam = [
     }
 ]
 
-
 for(let i = 0; i < ourTeam.length; i++){
+    /* creo la card con l'immagine vuota */
     let divCardEl = document.createElement('div');
     divCardEl.classList.add('card');
     sectionEl.appendChild(divCardEl);
     let imgEl = document.createElement('img');
     divCardEl.appendChild(imgEl);
     let singoloMembro = ourTeam[i];
+    /* forin per ciclare gli oggetti testuali */
     for (const key in ourTeam[i]) {
+        /* condizione per inserire la foto nell'immagine creata precedentemente 
+        e creo i tag p per i testi */
         if(key !== 'foto'){
             let pEl = document.createElement('p');
             pEl.append(singoloMembro[key]);
