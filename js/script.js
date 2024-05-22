@@ -1,3 +1,5 @@
+const sectionEl = document.querySelector('section#container');
+
 const ourTeam = [
     {
         nome: 'Wayne Barnett',
@@ -36,5 +38,9 @@ for(let i = 0; i < ourTeam.length; i++){
     let singoloMembro = ourTeam[i];
     for (const key in ourTeam[i]) {
         console.log(singoloMembro[key]);
-        }
+        let pEl = document.createElement('p');
+        pEl.append(singoloMembro[key]);
+        sectionEl.appendChild(pEl);
+    }
 }
+
